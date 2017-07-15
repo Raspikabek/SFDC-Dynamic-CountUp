@@ -1,5 +1,6 @@
 <aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global" controller="CountUp_ApexController">
 	
+	<aura:attribute access="global" name="title" type="String" default="Count Up"/>
 	<aura:attribute access="global" name="maxValue" type="Decimal" description="Max value presented" default="1234" />
 	<aura:attribute access="global" name="decimals" type="Integer" description="Decimals available" default="0" />
 	<aura:attribute access="global" name="duration" type="Decimal" description="Duration in seconds from 0 to MaxValue" default="2" />
@@ -13,8 +14,13 @@
 	<aura:attribute access="private" name="success" type="Boolean" />
 	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
 	
-	<aura:if isTrue="{!v.success}">
-		<c:inner_CountUp maxValue="{!v.maxValue}" decimals="{!v.decimals}" duration="{!v.duration}" t_separator="{!v.t_separator}" 
-						d_separator="{!v.d_separator}" prefix="{!v.prefix}" suffix="{!v.suffix}" />
-	</aura:if>
+	<lightning:card iconName="custom:custom109">
+		<aura:set attribute="title">
+			{!v.title}
+		</aura:set>
+		<aura:if isTrue="{!v.success}">
+			<c:inner_CountUp maxValue="{!v.maxValue}" decimals="{!v.decimals}" duration="{!v.duration}" t_separator="{!v.t_separator}" 
+							d_separator="{!v.d_separator}" prefix="{!v.prefix}" suffix="{!v.suffix}" />
+		</aura:if>
+	</lightning:card>
 </aura:component>
