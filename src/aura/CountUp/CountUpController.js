@@ -24,14 +24,18 @@
 			if(component.isValid && state === "SUCCESS"){
 				component.set("v.maxValue", response.getReturnValue());
 				component.set("v.success", true);
+				component.set("v.errorMessage",null);
 				console.log("Value returned");
 			}
 			else if(component.isValid && state === "ERROR"){
 				console.log("Something wrong!");
+				component.set("v.maxValue", 0);
+				component.set("v.success", true);
 				var errors = response.getError();
 				if(errors){
 					if(errors[0] && errors[0].message){
 						console.log("Error message: " + errors[0].message);
+						component.set("v.errorMessage","[ERROR] " + errors[0].message)
 					}
 				}
 				else {

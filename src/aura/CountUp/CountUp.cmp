@@ -13,12 +13,15 @@
 	<aura:attribute access="global" name="childRelation" type="String" />
 	<aura:attribute access="private" name="success" type="Boolean" />
 	<aura:attribute access="private" name="duration" type="Decimal" description="Duration in seconds from 0 to MaxValue" default="2.5" />
-
-	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+	<aura:attribute access="private" name="errorMessage" type="String" description="Display default error in the Component Footer" />
 	
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
 	<lightning:card iconName="custom:custom109">
 		<aura:set attribute="title">
 			{!v.title}
+		</aura:set>
+		<aura:set attribute="footer">
+			<div class="slds-text-color_error">{!v.errorMessage}</div>
 		</aura:set>
 		<aura:if isTrue="{!v.success}">
 			<c:inner_CountUp maxValue="{!v.maxValue}" decimals="{!v.decimals}" duration="{!v.duration}" t_separator="{!v.t_separator}" 

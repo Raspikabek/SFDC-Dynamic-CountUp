@@ -1,7 +1,5 @@
 ({
-	scriptsLoaded : function(component, event, helper) {
-		console.log("Scripts Loaded!");
-		
+	scriptsLoaded : function(component, event, helper) {	
 		var easingFn = function(t, b, c, d) {
 		  var ts = (t /= d) * t;
 		  var tc = ts * t;
@@ -23,6 +21,7 @@
 		var duration = component.get('v.duration');
 		var decimals = component.get('v.decimals');
 		var demo = new CountUp("raspisDojo_countUp_element", 0, maxValue, decimals, duration, options);
+		
 		demo.start();
 	}
 })
