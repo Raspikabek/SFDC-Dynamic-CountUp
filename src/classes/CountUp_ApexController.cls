@@ -1,9 +1,14 @@
 public with sharing class CountUp_ApexController {
 	@AuraEnabled
-	public static Decimal getMaxValue(Id recordId, String field, String SObjectName, String childRelation, String operation){
+	public static Decimal getMaxValue(Id recordId, String field, String SObjectName, String childRelation, String operation, String customConditions){
 		try{
-			String myQuery = 'SELECT (SELECT ' + field + ' FROM ' + childRelation + ' ) FROM ' + SObjectName + ' WHERE Id =:recordId LIMIT 1';
-			//String myQuery = 'SELECT ' + field + ' FROM ' + SObjectName + ' WHERE ' + parentField + ' =:recordId';
+			String myQuery;
+			if(customConditions != null){
+				myQuery = 'SELECT (SELECT ' + field + ' FROM ' + childRelation + ' WHERE '+ customConditions + ' ) FROM ' + SObjectName + ' WHERE Id =:recordId LIMIT 1';
+			}
+			else{
+				myQuery = 'SELECT (SELECT ' + field + ' FROM ' + childRelation + ' ) FROM ' + SObjectName + ' WHERE Id =:recordId LIMIT 1';
+			}
 			SObject myObject = Database.query(myQuery);
 			List<SObject> lSobj = myObject.getSObjects(childRelation);			
 			

@@ -3,6 +3,7 @@
 	<design:attribute name="childRelation" label="Child Relationship" default="Opportunities" description="Relationship API Name" />
 	<design:attribute name="field" label="Field" default="Amount" description="Field API Name from ChildRelationship sobject" />
 	<design:attribute name="operation" label="Operation" datasource="SUM,AVG,MIN,MAX" />
+	<design:attribute name="customCondition" label="Custom Conditions" description="WHERE clause. Ex: In Opportunities>> 'IsWon = TRUE'" />
 	<design:attribute name="decimals" label="Decimals" description="How many numbers need as decimals?" default="0" />
 	<design:attribute name="t_separator" label="Thousand Separator" default="," />
 	<design:attribute name="d_separator" label="Decimal Separator" default="." />

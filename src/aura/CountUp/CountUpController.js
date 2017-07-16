@@ -15,7 +15,8 @@
 			field : component.get("v.field"),
 			SObjectName : mySObjectName,
 			childRelation : myChildRelationship,
-			operation : component.get("v.operation")
+			operation : component.get("v.operation"),
+			customConditions : component.get("v.customCondition")
 		});
 		
 		action.setCallback(this, function(response){
