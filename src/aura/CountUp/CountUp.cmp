@@ -1,16 +1,16 @@
 <aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global" controller="CountUp_ApexController">
 	
-	<aura:attribute access="global" name="title" type="String" default="Count Up"/>
+	<aura:attribute required="true" access="global" name="title" type="String" default="Count Up"/>
 	<aura:attribute access="global" name="maxValue" type="Decimal" description="Max value presented" default="1234" />
-	<aura:attribute access="global" name="decimals" type="Integer" description="Decimals available" default="0" />
+	<aura:attribute required="true" access="global" name="decimals" type="Integer" description="Decimals available" default="0" />
 	<aura:attribute access="global" name="customCondition" type="String" description="Custom conditions for where clause" />
-	<aura:attribute access="global" name="t_separator" type="String" description="Thousands separator char" default="," />
-	<aura:attribute access="global" name="d_separator" type="String" description="Decimal separator char" default="." />
+	<aura:attribute required="true" access="global" name="t_separator" type="String" description="Thousands separator char" default="," />
+	<aura:attribute required="true" access="global" name="d_separator" type="String" description="Decimal separator char" default="." />
 	<aura:attribute access="global" name="prefix" type="String" />
 	<aura:attribute access="global" name="suffix" type="String" />
-	<aura:attribute access="global" name="operation" type="String" default="SUM" description="SUM, MAX, MIN or AVG" />
-	<aura:attribute access="global" name="field" type="String" default="Amount" />
-	<aura:attribute access="global" name="childRelation" type="String" />
+	<aura:attribute required="true" access="global" name="operation" type="String" default="SUM" description="SUM, MAX, MIN or AVG" />
+	<aura:attribute required="true" access="global" name="field" type="String" default="Amount" />
+	<aura:attribute required="true" access="global" name="childRelation" type="String" />
 	<aura:attribute access="private" name="success" type="Boolean" />
 	<aura:attribute access="private" name="duration" type="Decimal" description="Duration in seconds from 0 to MaxValue" default="2.5" />
 	<aura:attribute access="private" name="errorMessage" type="String" description="Display default error in the Component Footer" />
