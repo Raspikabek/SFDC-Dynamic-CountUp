@@ -3,7 +3,7 @@ public with sharing class CountUp_ApexController {
 	public static Decimal getMaxValue(Id recordId, String field, String SObjectName, String childRelation, String operation, String customConditions){
 		try{
 			String myQuery;
-			if(customConditions != null){
+			if(!String.isBlank(customConditions)){
 				myQuery = 'SELECT (SELECT ' + field + ' FROM ' + childRelation + ' WHERE '+ customConditions + ' ) FROM ' + SObjectName + ' WHERE Id =:recordId LIMIT 1';
 			}
 			else{
