@@ -1,4 +1,4 @@
-# SFDC Dynamic CountUp
+# SFDC Animated & Dynamic CountUp
 Lightning Component for Salesforce
 
 ![Animated Image](/img/countUp_animation.gif)
