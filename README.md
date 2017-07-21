@@ -9,7 +9,7 @@ Summarize, Average, Min or Max any field from any Child relationship in any SObj
 ### Instalation
 * Download from Github
 
-[* Install as Managed Package in your Org](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0Y000001KwsS)
+* [Install as Managed Package in your Org](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0Y000001KwsS)
 
 ### How to use
 
