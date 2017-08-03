@@ -8,7 +8,7 @@ private class CountUpTester{
 			Name = 'CountUp Account SA'
 		);
 		
-		insert a; 
+		insert a;
     
     	List<Opportunity> lOpps = new List<Opportunity>();
 		Opportunity o = new Opportunity(
@@ -18,7 +18,7 @@ private class CountUpTester{
 			StageName = vls.get(0).getValue(),
 			Amount = 1000
 		);
-		
+				
 		Opportunity o2 = new Opportunity(
 			AccountId = a.Id,
 			CloseDate = Date.today() + 15,
@@ -29,6 +29,8 @@ private class CountUpTester{
 		lOpps.add(o);
 		lOpps.add(o2);
 		insert lOpps;
+		
+		System.assertEquals(o.Id,!null);
 	}
 	
 	@isTest static void countUp_Controller(){
