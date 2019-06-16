@@ -26,3 +26,6 @@ Thumbs.db
 ehthumbs.db
 [Dd]esktop.ini
 $RECYCLE.BIN/
+
+#VSCode Workspace config
+.vscode/settings.json
