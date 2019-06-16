@@ -1,0 +1,12 @@
+<aura:component access="global">
+    <aura:attribute name="maxValue" type="Decimal" />
+    <aura:attribute name="decimals" type="Integer" />
+    <aura:attribute name="duration" type="Decimal" />
+    <aura:attribute name="t_separator" type="String" />
+    <aura:attribute name="d_separator" type="String" />
+    <aura:attribute name="prefix" type="String" />
+    <aura:attribute name="suffix" type="String" />
+
+    <ltng:require scripts="{!$Resource.countUpmin}" afterScriptsLoaded="{!c.scriptsLoaded}" />
+    <div class="slds-text-heading_large slds-text-align_center" id="raspisDojo_countUp_element"></div>
+</aura:component>
