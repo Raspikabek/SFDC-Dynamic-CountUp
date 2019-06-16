@@ -1,0 +1,11 @@
+{
+    "orgName": "SFDX Dynamic CountUp",
+    "edition": "Developer",
+    "features": ["LightningSalesConsole"],
+    "settings": {
+        "orgPreferenceSettings": {
+            "s1DesktopEnabled": true
+        }
+    },
+    "hasSampleData": true
+}

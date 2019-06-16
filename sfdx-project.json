@@ -1,0 +1,11 @@
+{
+    "packageDirectories": [
+        {
+            "path": "sfdc-dynamic-countup",
+            "default": true
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "46.0"
+}
